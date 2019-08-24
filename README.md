@@ -1,3 +1,6 @@
+# Note
+For full commit history view original repository at https://github.com/juncheong/Search-And-Reporting-Application
+
 # The web app is deployed at
 https://maccabeam.herokuapp.com/
 
