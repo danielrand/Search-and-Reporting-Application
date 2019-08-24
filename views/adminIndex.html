@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script src="/javascripts/navigation.js"></script>
+    <script src="/javascripts/search.js"></script>
+    <style>
+        .input-group {
+           position: absolute;
+           top: 200px;
+        }
+    </style> 
+    <title>Admin Index</title>
+</head>
+<body>
+    <h1>Admin Index</h1>
+
+    <div class="input-group mb-6 col-6 ">
+        <input type="text" id = 'urlText' class="form-control" placeholder="Enter URL to index" ria-label="searchbar1" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" onclick = "postToDatabase()">Search</button>
+        </div>
+      </div>
+    
+</body>
+</html>

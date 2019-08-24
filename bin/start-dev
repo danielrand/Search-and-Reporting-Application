@@ -1,0 +1,9 @@
+echo "running start-dev"
+
+
+# echo "Running migrations..."
+
+# echo "Done running migrations..."
+
+# npm start
+nodemon --watch views -e js,html server.js

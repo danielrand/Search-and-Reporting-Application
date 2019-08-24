@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/public/stylesheets/index.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TEST</h1>
+    <script>
+
+        const http = new XMLHttpRequest();
+        const url = '/insertPage';
+        const time = new Date().toISOString().slice(0, 19).replace('T', ' ');
+        //url, description, title, lastModified, lastIndexed
+        const params = 
+        {
+            "url": "https://www.cnn.com/travel/article/best-pizza-new-york-city/index.html",
+            "description": "New York City&#x27;s pizza scene is stronger than ever. Find out where to go for the best pizza restaurants and what they serve on their pies.",
+            "title": "These are New York City's best pizza restaurants",
+            "lastModified": time,
+            "lastIndexed": time
+        };
+        http.open('POST', url, true);
+
+        //Send the proper header information along with the request
+        http.setRequestHeader('Content-type', 'application/json');
+
+        http.onreadystatechange = function() {//Call a function when the state changes.
+            if(http.readyState == 4 && http.status == 200) {
+                console.log(http.responseText);
+            }
+        }
+        http.send(JSON.stringify(params));    
+    </script>
+</body>
+</html>

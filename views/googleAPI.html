@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/javascripts/navigation.js"></script>
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <script>
+      function loadXMLDoc() {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+          }
+        };
+        xmlhttp.open("GET", "cse.xml", true);
+        xmlhttp.send();
+      }
+    </script>
+    <title>Phase 4: Google API</title>
+</head>
+<body>
+    <h1>Phase 4: Google API</h1>
+
+            <div  class="input-group mb-3 col-3" style="width:0px;overflow:hidden;height:0px;"> 
+                <gcse:search enableAutoComplete="true"></gcse:search>
+                
+            </div>
+            <!-- <form id="searchbox_XXXXXXXXXX:YYYYYYYYY" action="" >
+                <input id="r" value="XXXXXXXXXX:YYYYYYYYY" name="cx" type="hidden" />
+                <input id="k" value="FORID:11" name="cof" type="hidden"/>
+                <input id="q" name="q" size="75" type="text"/>
+                <button class="btn btn-outline-secondary" value="Submit">Search</button>
+            </form> -->
+      <div class="input-group mb-6 col-6 ">
+        <input type="text" id = "searchBar" class="form-control" placeholder="Enter search terms" ria-label="searchbar1" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" onclick = "custom()">Search</button>
+        </div>
+        
+    </div>
+    <br><br><br>
+    <table id = "results" class="table col-9">
+    
+    </table>
+    <br>
+    <form id = "dropdown">
+
+    </form>
+    <button id="create" style=" = display: none" onclick="createFile()">Generate File</button> 
+    <a download="info.txt" id="downloadlink" style="display: none">Download File</a>
+</body>
+    <script src="/javascripts/googleAPI.js"></script>
+
+</html>

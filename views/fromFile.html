@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="/javascripts/navigation.js"></script>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jquery-csv.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phase 3: From File</title>
+</head>
+<body>
+    <h1>From File</h1>
+    <input type="file" id="up" />
+	<input type="submit" id="btn" onclick = "processFile()" />
+	<br> <br id = "break">
+    <div id = "bar" class="input-group mb-3 col-3">
+
+    </div>
+    <br>
+    <table id = "results" class="table col-9">
+    
+    </table>
+    <br>
+    <form id = "dropdown">
+
+    </form>
+
+    <button id="create" style=" = display: none" onclick="createFile()">Generate File</button> 
+    <a download="info.txt" id="downloadlink" style="display: none">Download File</a>
+</body>
+<script type="text/javascript" src="/javascripts/fileProcessing.js"></script>
+
+</html>
